@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz — R404 Comprendre la 4G</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══════════ ACCUEIL ═══════════ -->
+<section id="screen-home">
+  <div class="home-badge">Module R404</div>
+  <h1 class="home-title">Comprendre<span>la 4G</span></h1>
+  <p class="home-sub">Testez vos connaissances sur les réseaux mobiles 4G/LTE. Questions à choix simple et multiple.</p>
+  <div class="home-stats">
+    <div class="stat-box">
+      <div class="stat-num" id="total-count">—</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat-box">
+      <div class="stat-num" id="multi-count">—</div>
+      <div class="stat-label">Choix multiples</div>
+    </div>
+  </div>
+  <button class="btn-start" onclick="startQuiz()">Commencer →</button>
+</section>
+
+<!-- ═══════════ QUIZ ═══════════ -->
+<section id="screen-quiz">
+  <header class="quiz-header">
+    <div class="quiz-logo">R404</div>
+    <div class="quiz-counter">Question <strong id="q-current">1</strong> / <span id="q-total">—</span></div>
+    <div class="quiz-score-display">Score : <strong id="q-score">0</strong></div>
+  </header>
+  <div class="progress-bar-wrap">
+    <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
+  </div>
+
+  <div class="quiz-body">
+    <div class="question-num" id="q-num">Question 01</div>
+    <div class="question-text" id="q-text"></div>
+    <div class="question-hint" id="q-hint" style="display:none"></div>
+    <div class="options-grid" id="options-grid"></div>
+    <div class="feedback-box" id="feedback-box">
+      <div class="feedback-title" id="feedback-title"></div>
+      <div id="feedback-detail"></div>
+    </div>
+    <div class="quiz-nav">
+      <button class="btn-validate" id="btn-validate" onclick="validate()">Valider</button>
+      <button class="btn-next" id="btn-next" onclick="nextQuestion()">Question suivante →</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ RÉSULTATS ═══════════ -->
+<section id="screen-results">
+  <div class="result-badge" id="result-emoji">🎯</div>
+  <h2 class="result-title" id="result-title">Excellent !</h2>
+  <div class="result-score-big" id="result-score"></div>
+  <p class="result-sub" id="result-sub"></p>
+  <div class="result-breakdown">
+    <div class="breakdown-item">
+      <div class="breakdown-num good" id="res-correct">0</div>
+      <div class="breakdown-label">Correctes</div>
+    </div>
+    <div class="breakdown-item">
+      <div class="breakdown-num bad" id="res-wrong">0</div>
+      <div class="breakdown-label">Incorrectes</div>
+    </div>
+    <div class="breakdown-item">
+      <div class="breakdown-num" id="res-total" style="color:var(--accent3)">0</div>
+      <div class="breakdown-label">Total</div>
+    </div>
+  </div>
+  <button class="btn-retry" onclick="restartQuiz()">↺ Recommencer</button>
+</section>
+
+  <script src="script.js"></script>
+</body>
+</html>
