@@ -25,6 +25,7 @@ const QUESTIONS = [
   // ← Ajoute tes questions ici ↓
   {
     "question": "S1.L1.Q1 : Sur la photo ci-dessus, l'élément A est :",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-32-16.png"],
     "options": ["une station de base", "une cellule", "une antenne", "une base de données"],
     "correct": [0],
     "multiple": false,
@@ -998,6 +999,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.L1.Q1 : Quelle est l'adresse destination présente dans le paquet IP qui circule sur l'internet ?",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-46-25.png"],
     "options": ["193.137.99.99", "192.108.117.241", "10.13.20.9", "10.1.3.14", "10.1.3.1", "10.1.1.2", "10.1.1.1"],
     "correct": [0],
     "multiple": false,
@@ -1019,6 +1021,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.L2.Q1 : quelle configuration correspond à ce qu'on observe ?",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-46-45.png"],
     "options": ["A", "B", "C", "D"],
     "correct": [2],
     "multiple": false,
@@ -1082,6 +1085,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.L4.Q1 : Quelle affirmation est exacte ?",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-47-39.png"],
     "options": ["il y a un seul TEID et il vaut 101", "il y a un seul TEID et il vaut 3 333", "il y a un seul TEID et il vaut 3 334", "il y a un seul TEID et il vaut 22 222", "il y a deux TEIDs qui valent 101 et 3 333", "il y a deux TEIDs qui valent 22 222 et 3334"],
     "correct": [2],
     "multiple": false,
@@ -1096,6 +1100,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.L4.Q3 : Quelle affirmation est exacte au sujet du TEID alloué par le SGW pour le terminal B (représenté par un point d'interrogation rouge dans le dessin) ?",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-47-55.png"],
     "options": ["le TEID est nécessairement différent de toutes les valeurs affichées sur le dessin (101, 3333, 3334, 3339, 22 222, 22 444)", "Le TEID est nécessairement différent de toutes les valeurs déjà utilisées par le SGW (3333, 3334, 3339)", "Le TEID est nécessairement différent de toutes les valeurs utilisées sur l'interface de sortie vers les eNB du SGW (3333)", "Le TEID peut valoir n'importe quelle valeur car il n'y a pas de tunnel déjà établi par l'eNB 2", "La valeur du TEID dépend entièrement de la politique de l'opérateur, on ne peut absolument rien dire dessus."],
     "correct": [1],
     "multiple": false,
@@ -1187,6 +1192,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.DS.Q1 : Quelle est la pile de protocoles au-dessus d'Ethernet pour cette trace ? Le premier protocole cité (i.e. à gauche) est celui en bas de la pile, le dernier (i.e. à droite) est celui tout en haut de la pile.",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-49-08.png"],
     "options": ["GTP / IP / IP(ICMP) / UDP", "IP / IP(ICMP) / UDP / GTP /", "IP / UDP / GTP / IP(ICMP)", "IP / GTP / IP(ICMP)", "IP(ICMP) / GTP / UDP / IP"],
     "correct": [2],
     "multiple": false,
@@ -1236,6 +1242,7 @@ const QUESTIONS = [
   },
   {
     "question": "S4.DS.Q8 : Donner les adresses IP du SGW (2 réponses attendues)",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-50-18.png"],
     "options": ["10.5.1.9", "10.5.1.10", "10.11.1.137", "10.2.11.42", "10.19.2.19", "170.22.0.80"],
     "correct": [1, 2],
     "multiple": true,
@@ -1264,79 +1271,49 @@ const QUESTIONS = [
   },
   {
     "question": "S4.DS.Q12 : Indiquer la ligne qui correspond à une autre entrée dans le SGW.",
-    "options": [
-      "TEID=0x00000015 : Action=Foward, adresse IP dest=10.2.11.42, TEID=0x04b18505",
-      "TEID=0x00000015 : Action=Foward, adresse IP dest=10.5.1.9, TEID=0x20912c25",
-      "TEID=0x00000015 : Action=Foward, adresse IP dest=10.5.1.10, TEID=0x04b18525",
-      "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.5.1.9, TEID=0x04b18525",
-      "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.5.1.10, TEID=0x04b18525",
-      "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.2.11.42, TEID=0x00000015"
-    ],
+    "options": ["TEID=0x00000015 : Action=Foward, adresse IP dest=10.2.11.42, TEID=0x04b18505", "TEID=0x00000015 : Action=Foward, adresse IP dest=10.5.1.9, TEID=0x20912c25", "TEID=0x00000015 : Action=Foward, adresse IP dest=10.5.1.10, TEID=0x04b18525", "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.5.1.9, TEID=0x04b18525", "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.5.1.10, TEID=0x04b18525", "TEID=0x04b18505 : Action=Foward, adresse IP dest=10.2.11.42, TEID=0x00000015"],
     "correct": [5],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L1.Q1 : A la mise sous tension d'un terminal 4G (avec un abonnement valide).",
-    "options": [
-      "le terminal effectue seulement une procédure d'attachement au réseau pour signaler qu'il est désormais joignable",
-      "le terminal effectue une procédure d'attachement au réseau pour signaler qu'il est désormais joignable et envoie un message qui indique son adresse IP",
-      "le terminal effectue une procédure d'attachement au réseau pour signaler qu'il est désormais joignable et envoie une demande d'établissement de connectivité pour récupérer une adresse IP.",
-      "le terminal envoie seulement une demande d'établissement de connectivité pour récupérer une adresse IP, ce qui est interprété par le réseau comme une demande d'attachement"
-    ],
+    "options": ["le terminal effectue seulement une procédure d'attachement au réseau pour signaler qu'il est désormais joignable", "le terminal effectue une procédure d'attachement au réseau pour signaler qu'il est désormais joignable et envoie un message qui indique son adresse IP", "le terminal effectue une procédure d'attachement au réseau pour signaler qu'il est désormais joignable et envoie une demande d'établissement de connectivité pour récupérer une adresse IP.", "le terminal envoie seulement une demande d'établissement de connectivité pour récupérer une adresse IP, ce qui est interprété par le réseau comme une demande d'attachement"],
     "correct": [2],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L1.Q2 : L'état EMM-Deregistered correspond",
-    "options": [
-      "à un terminal non attaché au réseau (par exemple hors tension)",
-      "seulement à un terminal dont l'attachement a été explicitement refusé par le réseau",
-      "à un terminal attaché correctement au réseau mais non pourvu d'une adresse IP",
-      "à un terminal que le réseau a désactivé pour économiser son énergie"
-    ],
+    "options": ["à un terminal non attaché au réseau (par exemple hors tension)", "seulement à un terminal dont l'attachement a été explicitement refusé par le réseau", "à un terminal attaché correctement au réseau mais non pourvu d'une adresse IP", "à un terminal que le réseau a désactivé pour économiser son énergie"],
     "correct": [0],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L1.Q3 : L'état EMM-Registered correspond",
-    "options": [
-      "à un terminal attaché au réseau qui ne transmet pas de données",
-      "à un terminal attaché correctement au réseau mais non pourvu d'une adresse IP",
-      "à un terminal attaché correctement au réseau et pourvu d'une adresse IP",
-      "à un terminal dont le propriétaire s'est inscrit sur une liste chez l'opérateur pour éviter les spams."
-    ],
+    "options": ["à un terminal attaché au réseau qui ne transmet pas de données", "à un terminal attaché correctement au réseau mais non pourvu d'une adresse IP", "à un terminal attaché correctement au réseau et pourvu d'une adresse IP", "à un terminal dont le propriétaire s'est inscrit sur une liste chez l'opérateur pour éviter les spams."],
     "correct": [2],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L2.Q1 : La connexion radio entre un terminal et le réseau est maintenue",
-    "options": [
-      "tant que des données sont transmises par le terminal",
-      "tant que des données sont transmises par ou vers le terminal",
-      "tant que l'utilisateur effectue des opérations (appuie sur des touches ou touche un écran tactile)"
-    ],
+    "options": ["tant que des données sont transmises par le terminal", "tant que des données sont transmises par ou vers le terminal", "tant que l'utilisateur effectue des opérations (appuie sur des touches ou touche un écran tactile)"],
     "correct": [1],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L2.Q2 : La connexion radio entre un terminal et le réseau est libérée",
-    "options": [
-      "par le terminal, dès qu'il n'a plus rien à transmettre",
-      "par le réseau, en cas d'absence d'échanges de données sur la voie radio pendant une durée minimale, qui est un paramètre choisi par l'opérateur",
-      "par le réseau, en cas d'échanges de données sur la voie radio à un débit supérieur à un seuil, qui est un paramètre choisi par l'opérateur",
-      "par le terminal, en cas de dépassement de la puissance maximale de transmission."
-    ],
+    "options": ["par le terminal, dès qu'il n'a plus rien à transmettre", "par le réseau, en cas d'absence d'échanges de données sur la voie radio pendant une durée minimale, qui est un paramètre choisi par l'opérateur", "par le réseau, en cas d'échanges de données sur la voie radio à un débit supérieur à un seuil, qui est un paramètre choisi par l'opérateur", "par le terminal, en cas de dépassement de la puissance maximale de transmission."],
     "correct": [1],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L2.Q3 : Regarder la figure ci-dessous et choisir la représentation qui vous parait vous approcher le plus de l'état des tunnels et connexions pour un terminal 4G sous tension après une longue période d'inactivité.",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-51-32.png"],
     "options": ["A", "B", "C", "D"],
     "correct": [2],
     "multiple": false,
@@ -1344,18 +1321,14 @@ const QUESTIONS = [
   },
   {
     "question": "S5.L4.Q1 : Soit un terminal correctement attaché au réseau avec une longue période d'inactivité radio (aucune transmission). Une application, à un instant t, a des données à transmettre.",
-    "options": [
-      "le terminal effectue une procédure d'attachement au réseau pour acquérir de nouveau une adresse IP",
-      "le terminal transmet directement les données dans un paquet IP en réutilisant le dernier RNTI alloué",
-      "le terminal effectue une demande de rétablissement de la connexion radio (RRC Connection Request)",
-      "le terminal effectue une demande de rétablissement de service (UE-triggered service request procedure) consistant à établir à nouveau la connexion radio, la connexion S1-AP et le tunnel S1"
-    ],
+    "options": ["le terminal effectue une procédure d'attachement au réseau pour acquérir de nouveau une adresse IP", "le terminal transmet directement les données dans un paquet IP en réutilisant le dernier RNTI alloué", "le terminal effectue une demande de rétablissement de la connexion radio (RRC Connection Request)", "le terminal effectue une demande de rétablissement de service (UE-triggered service request procedure) consistant à établir à nouveau la connexion radio, la connexion S1-AP et le tunnel S1"],
     "correct": [3],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L4.Q2 : On considère un PC pourvu d'une clé 4G connectée à un réseau 4G mais n'ayant pas été utilisé depuis plusieurs minutes. On envoie une requête ping vers une machine IP. Choisir la réponse qui vous parait la plus vraisemblable.",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-52-16.png"],
     "options": ["A", "B", "C", "D"],
     "correct": [1],
     "multiple": false,
@@ -1363,6 +1336,7 @@ const QUESTIONS = [
   },
   {
     "question": "S5.L4.Q3 : Sur l'exemple de procédure UE-triggered service request procedure représenté ci-dessous, à quel moment précis le tunnel sur l'interface S1 (ou S1 bearer) est-il totalement réétabli (i.e. dans les deux sens de transmission)",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-52-34.png"],
     "options": ["t1", "t2", "t3", "t4"],
     "correct": [2],
     "multiple": false,
@@ -1370,30 +1344,21 @@ const QUESTIONS = [
   },
   {
     "question": "S5.L5.Q1 : Soit un terminal correctement attaché au réseau avec une longue période d'inactivité radio (aucune transmission). Ce terminal est par conséquent en état EMM-Registered et ECM-Idle. A l'instant t, un serveur a un paquet IP de données à transmettre au terminal. Que se passe-t-il ?",
-    "options": [
-      "Le serveur « bufferise » le paquet IP le temps que le terminal passe dans l'état ECM-Connected",
-      "Le paquet IP est transmis jusqu'au PGW puis le PGW le « bufferise », le temps que le terminal passe dans l'état ECM-Connected",
-      "Le paquet IP est transmis jusqu'au SGW puis le SGW le « bufferise », le temps que le terminal passe dans l'état ECM-Connected",
-      "Le paquet IP est transmis jusqu'à l'eNodeB puis l'eNodeB le « bufferise », le temps que le terminal passe dans l'état ECM-Connected",
-      "le paquet IP est transmis directement au terminal dans le message de paging."
-    ],
+    "options": ["Le serveur « bufferise » le paquet IP le temps que le terminal passe dans l'état ECM-Connected", "Le paquet IP est transmis jusqu'au PGW puis le PGW le « bufferise », le temps que le terminal passe dans l'état ECM-Connected", "Le paquet IP est transmis jusqu'au SGW puis le SGW le « bufferise », le temps que le terminal passe dans l'état ECM-Connected", "Le paquet IP est transmis jusqu'à l'eNodeB puis l'eNodeB le « bufferise », le temps que le terminal passe dans l'état ECM-Connected", "le paquet IP est transmis directement au terminal dans le message de paging."],
     "correct": [2],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L5.Q2 : On considère le même scénario que précédemment. Lorsque le paquet arrive au SGW",
-    "options": [
-      "le SGW envoie un message GTP-C Downlink Data Notification à tous les MME du réseau, donc à celui qui gère le terminal destinataire du paquet",
-      "le SGW réétablit un tunnel de contrôle avec le MME qui gère le terminal destinataire puis envoie un message GTP-C Downlink Data Notification",
-      "le SGW envoie un message GTP-C Downlink Data Notification sur le tunnel de contrôle courant entre le SGW et le MME."
-    ],
+    "options": ["le SGW envoie un message GTP-C Downlink Data Notification à tous les MME du réseau, donc à celui qui gère le terminal destinataire du paquet", "le SGW réétablit un tunnel de contrôle avec le MME qui gère le terminal destinataire puis envoie un message GTP-C Downlink Data Notification", "le SGW envoie un message GTP-C Downlink Data Notification sur le tunnel de contrôle courant entre le SGW et le MME."],
     "correct": [2],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L5.Q3 : On montre, dans la figure suivante, les échanges de messages correspondant au scénario de la question 1. A partir de quel moment, le paquet peut-il être transmis vers le terminal ?",
+    "images": ["schemas/Capture d’écran_2026-04-01_15-53-07.png"],
     "options": ["t1", "t2", "t3", "t4"],
     "correct": [2],
     "multiple": false,
@@ -1401,23 +1366,14 @@ const QUESTIONS = [
   },
   {
     "question": "S5.L6.Q1 : En 4G, le bearer par défaut",
-    "options": [
-      "est utilisé uniquement pour transmettre de la signalisation et ne peut servir à transmettre des données utilisateurs",
-      "convient uniquement pour les services tolérant un fort taux de perte",
-      "est utilisé lorsqu'il y a une panne locale dans le réseau et correspond à un mode dégradé",
-      "convient pour une large gamme d'applications et de services qui n'ont pas d'exigence forte de qualité de service"
-    ],
+    "options": ["est utilisé uniquement pour transmettre de la signalisation et ne peut servir à transmettre des données utilisateurs", "convient uniquement pour les services tolérant un fort taux de perte", "est utilisé lorsqu'il y a une panne locale dans le réseau et correspond à un mode dégradé", "convient pour une large gamme d'applications et de services qui n'ont pas d'exigence forte de qualité de service"],
     "correct": [3],
     "multiple": false,
     "explanation": ""
   },
   {
     "question": "S5.L6.Q2 : En 4G, l'établissement d'un bearer dédié ou « dedicated bearer » correspond",
-    "options": [
-      "à l'allocation d'une nouvelle adresse IP pour le terminal, associée à un niveau de qualité de service garanti",
-      "à l'établissement de tunnels de données et de contrôles supplémentaires entre eNodeB, SGW, PGW et MME pour, à la fois, disposer d'un niveau de qualité de service garanti et le gérer",
-      "à l'établissement de tunnels de données entre eNodeB, SGW et PGW pour disposer d'un niveau de qualité de service garanti"
-    ],
+    "options": ["à l'allocation d'une nouvelle adresse IP pour le terminal, associée à un niveau de qualité de service garanti", "à l'établissement de tunnels de données et de contrôles supplémentaires entre eNodeB, SGW, PGW et MME pour, à la fois, disposer d'un niveau de qualité de service garanti et le gérer", "à l'établissement de tunnels de données entre eNodeB, SGW et PGW pour disposer d'un niveau de qualité de service garanti"],
     "correct": [2],
     "multiple": false,
     "explanation": ""
@@ -1425,6 +1381,92 @@ const QUESTIONS = [
   {
     "question": "S5.L6.Q3 : L'entité qui déclenche l'établissement d'un bearer dédié est",
     "options": ["l'UE", "l'eNodeB", "le PGW", "le MME", "le SGW"],
+    "correct": [2],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q1 : A la mise sous tension, un terminal 4G",
+    "images": ["schemas/Capture d’écran_2026-04-01_16-41-20.png"],
+    "options": ["effectue une procédure de demande de service (UE-triggered Service Request) pour activer le service 4G", "s'attache au réseau et demande l'établissement de connectivité (acquisition d'une adresse IP)", "s'attache au réseau et demande ultérieurement l'établissement de connectivité si et seulement si il y a des données à transmettre", "ne fait rien"],
+    "correct": [1],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q2 : Quatre états de tunnel sont proposés dans la figure ci-dessus. Choisissez l'état correct juste à la fin de la procédure effectuée à la mise sous tension",
+    "options": ["A", "B", "C", "D"],
+    "correct": [0],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q3 : Après une longue période d'inactivité d'un terminal sur la voie radio (absence de transmissions et de réceptions de paquets de données), le réseau",
+    "options": ["libère les connexions radios, S1AP et le tunnel S1 et détache le terminal du réseau (perte d'adresse IP)", "libère seulement la connexion radio, S1AP et le tunnel S1", "libère seulement la connexion radio", "établit un bearer dédié"],
+    "correct": [1],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q4 : A l'issue des procédures UE-triggered Service Request et Network-triggered Service Request,",
+    "options": ["le terminal est en état EMM Deregistered et ECM-idle", "le terminal est en état EMM Registered et ECM-idle", "le terminal est en état EMM Registered et ECM-connected", "on ne peut pas rien dire sur l'état du terminal"],
+    "correct": [2],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q5 : Le terminal n'a alors plus de",
+    "options": ["RNTI", "IMSI", "TMSI", "addresse IP"],
+    "correct": [0],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q6 : (Suite des questions précédentes) Quatre états de tunnel sont proposés dans la figure ci-dessus. Choisissez l'état correct des tunnels et connexions.",
+    "images": ["schemas/Capture d’écran_2026-04-01_16-42-16.png"],
+    "options": ["A", "B", "C", "D"],
+    "correct": [3],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q7 : Après une heure, le terminal a des données à transmettre. Quelle procédure est exécutée ?",
+    "options": ["EMM Attach Request", "PDN Connectivity Request", "Network-triggered Service Request", "UE-triggered Service Request"],
+    "correct": [3],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q8 : (Suite des questions précédentes) On considère les mêmes 4 propositions que sur la figure ci-dessus. Choisissez l'état correct des tunnels et connexions à l'issue de la procédure.",
+    "options": ["A", "B", "C", "D"],
+    "correct": [0],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q9 : Cette question ne dépend pas des précédentes. A l'issue des procédures UE-triggered Service Request et Network-triggered Service Request,",
+    "options": ["le terminal est en état EMM Deregistered et ECM-idle", "le terminal est en état EMM Registered et ECM-idle", "le terminal est en état EMM Registered et ECM-connected", "on ne peut pas rien dire sur l'état du terminal"],
+    "correct": [2],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q10 : La procédure Network-triggered Service Request",
+    "options": ["est fondamentalement différente de la procédure UE-triggered Service Request car elle coniste en des messages entre les entités du réseau coeur", "consiste à établir un tunnel entre SGW et PGW préalablement à une exécution de UE-triggered Service Request", "consiste à diffuser sur plusieurs cellules un message de paging qui déclenche ensuite une exécution de UE-triggered Service Request", "consiste à établir une allocation d'adresse IP préalablement à une exécution de UE-triggered Service Request"],
+    "correct": [2],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q11 : Soit un terminal qui fonctionne correctement sur le réseau mais n'a pas été utilisé depuis quelques minutes. À 4 heures du matin, une application déclenche la transmission d'un paquet IP tous les 500 ms vers un serveur.",
+    "options": ["tous les paquets mettent le même temps à arriver au serveur (ils arrivent par exemple à 4:00:00.04, 4:00:00.54, 4:00:01.04, 4:00:01.54)", "le premier paquet arrive plus tard et les suivants mettent le même temps à arriver au serveur (ils arrivent par exemple à 4:00:00.34, 4:00:00.54, 4:00:01.04, 4:00:01.54)", "les paquets mettent de plus en plus de temps à arriver au serveur (ils arrivent par exemple à 4:00:00.04, 4:00:00.58, 4:00:01.12, 4:00:01.66)", "le premier paquet n'arrive jamais et les suivants arrivent instantanément (ils arrivent par exemple à 4:00:00.50, 4:00:01.00, 4:00:01.50)"],
+    "correct": [1],
+    "multiple": false,
+    "explanation": ""
+  },
+  {
+    "question": "S5.DS.q12 : Quand une garantie de qualité de service est exigée pour un flux de données, il faut",
+    "options": ["exécuter une procédure Network-triggered Service Request", "exécuter une procédure PDN Connectivity Request", "établir un bearer dédié ou dedicated bearer", "exécuter deux procédures UE-tiggered Service Request pour ainsi disposer d'un débit supérieur"],
     "correct": [2],
     "multiple": false,
     "explanation": ""
@@ -1950,13 +1992,18 @@ const QUESTIONS = [
 ];
 
 // ══════════════════════════════════
-//  LOGIQUE (ne pas modifier)
+//  ÉTAT
 // ══════════════════════════════════
 let current = 0;
 let score = 0;
 let selected = [];
 let answered = false;
+let quizOrder = []; // indices dans QUESTIONS, dans l'ordre de passage
+let shuffleEnabled = false;
 
+// ══════════════════════════════════
+//  INIT ACCUEIL
+// ══════════════════════════════════
 function init() {
   document.getElementById('total-count').textContent = QUESTIONS.length;
   const multiCount = QUESTIONS.filter(q => q.multiple).length;
@@ -1964,30 +2011,144 @@ function init() {
   document.getElementById('q-total').textContent = QUESTIONS.length;
 }
 
+// ══════════════════════════════════
+//  DÉMARRAGE
+// ══════════════════════════════════
 function startQuiz() {
-  current = 0; score = 0; selected = []; answered = false;
-  document.getElementById('screen-home').style.display = 'none';
-  document.getElementById('screen-quiz').style.display = 'flex';
-  document.getElementById('screen-results').style.display = 'none';
+  shuffleEnabled = document.getElementById('toggle-shuffle').classList.contains('active');
+
+  // Construire l'ordre
+  quizOrder = QUESTIONS.map((_, i) => i);
+  if (shuffleEnabled) {
+    for (let i = quizOrder.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [quizOrder[i], quizOrder[j]] = [quizOrder[j], quizOrder[i]];
+    }
+  }
+
+  current = 0;
+  score = 0;
+  selected = [];
+  answered = false;
+
+  showScreen('quiz');
   renderQuestion();
 }
 
+// ══════════════════════════════════
+//  NAVIGATION ÉCRANS
+// ══════════════════════════════════
+function showScreen(name) {
+  ['home', 'quiz', 'results', 'browser'].forEach(s => {
+    const el = document.getElementById('screen-' + s);
+    el.style.display = 'none';
+  });
+  const target = document.getElementById('screen-' + name);
+  target.style.display = (name === 'home' || name === 'browser' || name === 'results') ? 'flex' : 'flex';
+  target.style.flexDirection = 'column';
+}
+
+// ══════════════════════════════════
+//  TOGGLE ALÉATOIRE
+// ══════════════════════════════════
+function toggleShuffle() {
+  const btn = document.getElementById('toggle-shuffle');
+  btn.classList.toggle('active');
+  btn.querySelector('.toggle-label').textContent = btn.classList.contains('active') ? 'Aléatoire : ON' : 'Aléatoire : OFF';
+}
+
+// ══════════════════════════════════
+//  NAVIGATEUR DE QUESTIONS
+// ══════════════════════════════════
+function openBrowser() {
+  const grid = document.getElementById('browser-grid');
+  grid.innerHTML = '';
+
+  QUESTIONS.forEach((q, i) => {
+    const card = document.createElement('div');
+    card.className = 'browser-card' + (q.multiple ? ' is-multi' : '');
+    card.innerHTML = `
+      <div class="browser-card-header">
+        <span class="browser-qnum">Q${String(i + 1).padStart(2, '0')}</span>
+        ${q.multiple ? '<span class="browser-tag">Choix multiples</span>' : '<span class="browser-tag single">Choix unique</span>'}
+      </div>
+      <div class="browser-qtext">${q.question}</div>
+      <div class="browser-options">
+        ${q.options.map((opt, j) => `
+          <div class="browser-opt ${q.correct.includes(j) ? 'is-correct' : ''}">
+            <span class="browser-opt-letter">${['A','B','C','D','E','F'][j]}</span>
+            <span>${opt}</span>
+            ${q.correct.includes(j) ? '<span class="browser-check">✓</span>' : ''}
+          </div>
+        `).join('')}
+      </div>
+      ${q.explanation ? `<div class="browser-expl">💬 ${q.explanation}</div>` : ''}
+      <button class="browser-goto" onclick="gotoQuestion(${i})">Aller à cette question →</button>
+    `;
+    grid.appendChild(card);
+  });
+
+  showScreen('browser');
+}
+
+function closeBrowser() {
+  showScreen('home');
+}
+
+// Aller directement à une question depuis le navigateur
+function gotoQuestion(index) {
+  // Trouver la position dans quizOrder, ou démarrer un nouveau quiz à cette question
+  quizOrder = QUESTIONS.map((_, i) => i); // ordre normal
+  shuffleEnabled = false;
+  document.getElementById('toggle-shuffle').classList.remove('active');
+  document.getElementById('toggle-shuffle').querySelector('.toggle-label').textContent = 'Aléatoire : OFF';
+
+  current = index;
+  score = 0;
+  selected = [];
+  answered = false;
+  document.getElementById('q-total').textContent = QUESTIONS.length;
+
+  showScreen('quiz');
+  renderQuestion();
+}
+
+// ══════════════════════════════════
+//  RENDU QUESTION
+// ══════════════════════════════════
 function renderQuestion() {
   answered = false;
   selected = [];
-  const q = QUESTIONS[current];
-  const total = QUESTIONS.length;
 
-  // Header update
+  const qIndex = quizOrder[current];
+  const q = QUESTIONS[qIndex];
+  const total = quizOrder.length;
+
   document.getElementById('q-current').textContent = current + 1;
   document.getElementById('q-score').textContent = score;
+  document.getElementById('q-total').textContent = total;
   document.getElementById('progress-fill').style.width = ((current / total) * 100) + '%';
 
-  // Question
   document.getElementById('q-num').textContent = `Question ${String(current + 1).padStart(2, '0')}`;
   document.getElementById('q-text').textContent = q.question;
 
-  // Hint
+  // Images
+  const imgContainer = document.getElementById('q-images');
+  imgContainer.innerHTML = '';
+  if (q.images && q.images.length > 0) {
+    q.images.forEach(src => {
+      const img = document.createElement('img');
+      img.src = src;
+      img.className = 'q-image';
+      img.alt = 'Schéma de la question';
+      img.onclick = () => img.classList.toggle('zoomed');
+      imgContainer.appendChild(img);
+    });
+    imgContainer.style.display = 'flex';
+  } else {
+    imgContainer.style.display = 'none';
+  }
+
   const hint = document.getElementById('q-hint');
   if (q.multiple) {
     hint.style.display = 'flex';
@@ -1996,7 +2157,6 @@ function renderQuestion() {
     hint.style.display = 'none';
   }
 
-  // Options
   const grid = document.getElementById('options-grid');
   grid.innerHTML = '';
   const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
@@ -2014,53 +2174,53 @@ function renderQuestion() {
     grid.appendChild(btn);
   });
 
-  // Feedback
   const fb = document.getElementById('feedback-box');
   fb.className = 'feedback-box';
-  fb.querySelector('#feedback-title').textContent = '';
-  fb.querySelector('#feedback-detail').textContent = '';
+  document.getElementById('feedback-title').textContent = '';
+  document.getElementById('feedback-detail').textContent = '';
 
-  // Buttons
   document.getElementById('btn-validate').style.display = 'none';
   document.getElementById('btn-next').style.display = 'none';
 }
 
+// ══════════════════════════════════
+//  SÉLECTION OPTION
+// ══════════════════════════════════
 function selectOption(index) {
   if (answered) return;
-  const q = QUESTIONS[current];
+  const qIndex = quizOrder[current];
+  const q = QUESTIONS[qIndex];
 
   if (q.multiple) {
     const pos = selected.indexOf(index);
-    if (pos === -1) {
-      selected.push(index);
-    } else {
-      selected.splice(pos, 1);
-    }
+    if (pos === -1) selected.push(index);
+    else selected.splice(pos, 1);
   } else {
     selected = [index];
   }
 
-  // Refresh visual
   document.querySelectorAll('.option-btn').forEach(btn => {
     const i = parseInt(btn.dataset.index);
     btn.classList.toggle('selected', selected.includes(i));
   });
 
-  // Show validate button
   document.getElementById('btn-validate').style.display = selected.length > 0 ? 'block' : 'none';
 }
 
+// ══════════════════════════════════
+//  VALIDATION
+// ══════════════════════════════════
 function validate() {
   if (answered || selected.length === 0) return;
   answered = true;
 
-  const q = QUESTIONS[current];
+  const qIndex = quizOrder[current];
+  const q = QUESTIONS[qIndex];
   const correct = q.correct;
   const isCorrect = selected.length === correct.length && selected.every(s => correct.includes(s));
 
   if (isCorrect) score++;
 
-  // Color options
   document.querySelectorAll('.option-btn').forEach(btn => {
     const i = parseInt(btn.dataset.index);
     btn.classList.add('locked');
@@ -2074,7 +2234,6 @@ function validate() {
     }
   });
 
-  // Feedback
   const fb = document.getElementById('feedback-box');
   const title = document.getElementById('feedback-title');
   const detail = document.getElementById('feedback-detail');
@@ -2087,8 +2246,7 @@ function validate() {
     fb.className = 'feedback-box error show';
     title.textContent = '✗ Mauvaise réponse';
     const correctLabels = correct.map(c => ['A','B','C','D','E','F'][c]).join(', ');
-    detail.textContent = (q.explanation || '') + (q.explanation ? ' ' : '') + `La bonne réponse était : ${correctLabels}.`;
-    // Shake wrong options
+    detail.textContent = (q.explanation ? q.explanation + ' — ' : '') + `Bonne réponse : ${correctLabels}.`;
     document.querySelectorAll('.option-btn.wrong').forEach(btn => {
       btn.classList.add('shake');
       setTimeout(() => btn.classList.remove('shake'), 400);
@@ -2098,23 +2256,28 @@ function validate() {
   document.getElementById('btn-validate').style.display = 'none';
   document.getElementById('btn-next').style.display = 'block';
   document.getElementById('btn-next').textContent =
-    current < QUESTIONS.length - 1 ? 'Question suivante →' : 'Voir les résultats →';
+    current < quizOrder.length - 1 ? 'Question suivante →' : 'Voir les résultats →';
 }
 
+// ══════════════════════════════════
+//  QUESTION SUIVANTE
+// ══════════════════════════════════
 function nextQuestion() {
   current++;
-  if (current >= QUESTIONS.length) {
+  if (current >= quizOrder.length) {
     showResults();
   } else {
     renderQuestion();
   }
 }
 
+// ══════════════════════════════════
+//  RÉSULTATS
+// ══════════════════════════════════
 function showResults() {
-  document.getElementById('screen-quiz').style.display = 'none';
-  document.getElementById('screen-results').style.display = 'flex';
+  showScreen('results');
 
-  const total = QUESTIONS.length;
+  const total = quizOrder.length;
   const pct = Math.round((score / total) * 100);
   const wrong = total - score;
 
@@ -2122,21 +2285,19 @@ function showResults() {
   document.getElementById('res-correct').textContent = score;
   document.getElementById('res-wrong').textContent = wrong;
   document.getElementById('res-total').textContent = total;
-  document.getElementById('result-sub').textContent = `${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${total}`;
-  document.getElementById('q-score').textContent = score;
+  document.getElementById('result-sub').textContent =
+    `${score} bonne${score > 1 ? 's' : ''} réponse${score > 1 ? 's' : ''} sur ${total}${shuffleEnabled ? ' — mode aléatoire' : ''}`;
 
-  // Emoji + titre selon score
   const emoji = document.getElementById('result-emoji');
   const title = document.getElementById('result-title');
-  if (pct >= 80) { emoji.textContent = '🏆'; title.textContent = 'Excellent !'; }
+  if (pct >= 80)      { emoji.textContent = '🏆'; title.textContent = 'Excellent !'; }
   else if (pct >= 60) { emoji.textContent = '👍'; title.textContent = 'Bien joué !'; }
   else if (pct >= 40) { emoji.textContent = '📚'; title.textContent = 'Peut mieux faire'; }
-  else { emoji.textContent = '💡'; title.textContent = 'À retravailler'; }
+  else                { emoji.textContent = '💡'; title.textContent = 'À retravailler'; }
 }
 
 function restartQuiz() {
-  document.getElementById('screen-results').style.display = 'none';
-  document.getElementById('screen-home').style.display = 'flex';
+  showScreen('home');
 }
 
 init();

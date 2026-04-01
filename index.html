@@ -14,6 +14,7 @@
   <div class="home-badge">Module R404</div>
   <h1 class="home-title">Comprendre<span>la 4G</span></h1>
   <p class="home-sub">Testez vos connaissances sur les réseaux mobiles 4G/LTE. Questions à choix simple et multiple.</p>
+
   <div class="home-stats">
     <div class="stat-box">
       <div class="stat-num" id="total-count">—</div>
@@ -24,6 +25,17 @@
       <div class="stat-label">Choix multiples</div>
     </div>
   </div>
+
+  <div class="home-options">
+    <button class="toggle-btn" id="toggle-shuffle" onclick="toggleShuffle()">
+      <div class="toggle-track"><div class="toggle-thumb"></div></div>
+      <span class="toggle-label">Aléatoire : OFF</span>
+    </button>
+    <button class="btn-browse" onclick="openBrowser()">
+      📋 Voir toutes les questions
+    </button>
+  </div>
+
   <button class="btn-start" onclick="startQuiz()">Commencer →</button>
 </section>
 
@@ -31,8 +43,11 @@
 <section id="screen-quiz">
   <header class="quiz-header">
     <div class="quiz-logo">R404</div>
-    <div class="quiz-counter">Question <strong id="q-current">1</strong> / <span id="q-total">—</span></div>
-    <div class="quiz-score-display">Score : <strong id="q-score">0</strong></div>
+    <div class="quiz-header-center">
+      <div class="quiz-counter">Question <strong id="q-current">1</strong> / <span id="q-total">—</span></div>
+      <div class="quiz-score-display">Score : <strong id="q-score">0</strong></div>
+    </div>
+    <button class="btn-browse-mini" onclick="openBrowser()">📋 Questions</button>
   </header>
   <div class="progress-bar-wrap">
     <div class="progress-bar-fill" id="progress-fill" style="width:0%"></div>
@@ -41,6 +56,7 @@
   <div class="quiz-body">
     <div class="question-num" id="q-num">Question 01</div>
     <div class="question-text" id="q-text"></div>
+    <div id="q-images" style="display:none"></div>
     <div class="question-hint" id="q-hint" style="display:none"></div>
     <div class="options-grid" id="options-grid"></div>
     <div class="feedback-box" id="feedback-box">
@@ -51,6 +67,20 @@
       <button class="btn-validate" id="btn-validate" onclick="validate()">Valider</button>
       <button class="btn-next" id="btn-next" onclick="nextQuestion()">Question suivante →</button>
     </div>
+  </div>
+</section>
+
+<!-- ═══════════ NAVIGATEUR ═══════════ -->
+<section id="screen-browser">
+  <header class="browser-header">
+    <div class="browser-title">Toutes les questions <span id="browser-count" style="color:var(--text-muted);font-weight:400;font-size:0.85rem"></span></div>
+    <button class="btn-close" onclick="closeBrowser()">← Retour</button>
+  </header>
+  <div class="browser-search-wrap">
+    <input class="browser-search" type="text" id="browser-search" placeholder="🔍 Rechercher une question..." oninput="filterBrowser(this.value)">
+  </div>
+  <div class="browser-body">
+    <div class="browser-grid" id="browser-grid"></div>
   </div>
 </section>
 
@@ -77,6 +107,16 @@
   <button class="btn-retry" onclick="restartQuiz()">↺ Recommencer</button>
 </section>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+<script>
+  // Filtre de recherche dans le navigateur
+  function filterBrowser(query) {
+    const q = query.toLowerCase();
+    document.querySelectorAll('.browser-card').forEach(card => {
+      const text = card.querySelector('.browser-qtext').textContent.toLowerCase();
+      card.style.display = text.includes(q) ? '' : 'none';
+    });
+  }
+</script>
 </body>
 </html>
